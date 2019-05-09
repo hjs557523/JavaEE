@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>邮箱注册</title>
+	<style type="text/css">
+	td{
+		text-align: center;
+		color: blue;
+	}
+	textarea{
+		width: 200px;
+		height: 100px;
+	}
+		
+	</style>
+	<script type="text/javascript">
+		
+		function IsEmail(str) {
+	    var reg=/^[\s\S]{6,10}$/;
+	    return reg.test(str);
+        }
+
+        function IsPassword(pw1,pw2){
+	    var reg=/^[a-zA-Z0-9]{6,15}$/;
+	    return (reg.test(pw1)&&reg.test(pw2)&&(pw1==pw2));
+        }
+
+        function fun1(){	
+        	
+		if(!IsEmail(document.getElementById("email").value)){
+		alert("邮箱名称填写错误或不规范");
+		document.getElementById("email").focus();
+		return false;
+	    } 
+
+	    if(!IsPassword(document.getElementById("pw").value,document.getElementById("rpw").value)){
+		alert("两个密码必须相同且不能为空");
+	    document.getElementById("rpw").focus();
+	    return false;
+	    }
+
+	    alert("提交成功");
+	    return true;
+	    }
+	</script>
+</head>
+<body>
+
+	<form name="MyEmail" action="" onsubmit="return fun1()">
+		<div align="center">
+		<table border="1px"  width="50%">
+			<tr>
+				<td colspan="2" align=center><h3>E-mail注册</h3></td>
+			</tr>
+			<tr>
+				<td><font color="red">邮箱名称:</font></td>
+				<td><input type="text" name="email" id="email" value=""></td>
+			</tr>
+			<tr>
+				<td><font color="red">设置密码（密码长度大于6位）:</font></td>
+				<td><input type="password" name="passord" id="pw" value=""></td>
+			</tr>
+				<td><font color="red">确认密码:</font></td>
+			    <td><input type="password" name="rpassword"  id="rpw" value=""></td>
+			</tr>
+			<tr>
+				<td><font color="red">来自城市:</font></td>
+				<td><input type="text" name="city"></td>
+			</tr>
+			<tr>
+				<td><font color="red">个人爱好:</font></td>
+				<td><textarea></textarea></td>
+			</tr>
+			<tr>
+				<td><label for="sex"><font color="red">性别：</font></label></td>
+				<td>
+					<input type="radio" name="gender" id="sex" value="0">男
+					<input type="radio" name="gender" value="1">女
+				</td>
+			</tr>
+			<tr>
+				<td><font color="red">个人介绍</font></td>
+				<td><textarea></textarea></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="submit"  value="提交" >
+	                <input type="reset"   value="还原">
+				</td>
+			</tr>
+		</table>
+	</form>
+		
+
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>上机任务7</title>
+</head>
+<body>
+
+<script>
+function dofor(){
+	var sum1 = 0;
+	var i;
+    for(i=0;i<=50;i++){
+    	if(i%2==0)
+    		sum1+=i;
+    }
+    document.write(sum1);
+    } 
+
+function dowhile() {
+
+   	var sum2 =0;
+   	var j = 0;
+   	while(j<=50){
+   		if(j%2==0)
+   			sum2+=j;
+   		j++;
+   	}
+   	document.write(sum2);
+   }  
+</script>
+<input type="button" name="" onclick="dowhile()" value="使用while循环">
+<input type="button" name="" onclick="dofor()" value="使用for循环">
+
+</body>
+</html>
