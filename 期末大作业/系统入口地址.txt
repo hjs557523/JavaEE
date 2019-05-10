@@ -1,2 +1,2 @@
-用户：http://localhost:8080/logout
-管理员：http://localhost:8080/admin/form-amazeui.jsp
+user: http://localhost:8080/logout
+admin: http://localhost:8080/admin/form-amazeui.jsp
